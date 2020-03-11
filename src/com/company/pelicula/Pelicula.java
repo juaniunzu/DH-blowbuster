@@ -1,4 +1,6 @@
-package com.company;
+package com.company.pelicula;
+
+import com.company.pelicula.Ejemplar;
 
 import java.util.Collection;
 import java.util.Iterator;

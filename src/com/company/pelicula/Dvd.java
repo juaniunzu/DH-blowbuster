@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pelicula;
 
 public class Dvd extends Ejemplar {
 

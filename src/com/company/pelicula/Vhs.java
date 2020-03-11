@@ -1,4 +1,7 @@
-package com.company;
+package com.company.pelicula;
+
+import com.company.pelicula.Ejemplar;
+import com.company.pelicula.Pelicula;
 
 public class Vhs extends Ejemplar {
 

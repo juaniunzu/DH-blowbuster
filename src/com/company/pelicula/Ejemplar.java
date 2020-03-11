@@ -1,6 +1,8 @@
-package com.company;
+package com.company.pelicula;
 
-public abstract class Ejemplar  {
+import com.company.Alquilable;
+
+public abstract class Ejemplar implements Alquilable {
 
   private Integer codigo;
   private Pelicula pelicula;
