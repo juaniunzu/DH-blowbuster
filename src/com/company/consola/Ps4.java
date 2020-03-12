@@ -6,19 +6,4 @@ public class Ps4 extends Consola {
     super(nombre, codigo);
   }
 
-  @Override
-  public void alquilar() {
-    //todo
-  }
-
-  @Override
-  public void devolver(Integer codigo) {
-    //todo
-  }
-
-  @Override
-  public Boolean alquilado() {
-    return super.alquilado();
-    //todo
-  }
 }

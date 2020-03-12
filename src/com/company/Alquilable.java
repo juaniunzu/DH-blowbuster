@@ -3,7 +3,7 @@ package com.company;
 public interface Alquilable {
 
   void alquilar();
-  void devolver(Integer codigo);
+  void devolver();
   Boolean alquilado();
 
 

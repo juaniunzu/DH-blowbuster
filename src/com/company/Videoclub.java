@@ -1,41 +1,52 @@
 package com.company;
 
-
 import com.company.consola.Consola;
 import com.company.pelicula.Ejemplar;
-
+import com.sun.tools.javac.util.List;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Videoclub {
 
-  private ArrayList<Alquilable> listaDeAlquilables;
+  private HashMap<Integer, Alquilable> listaDeAlquilables;
 
   public Videoclub() {
-    this.listaDeAlquilables = new ArrayList<Alquilable>();
+    this.listaDeAlquilables = new HashMap();
   }
 
-  public void alquilarPelicula(Ejemplar unEjemplar){
-    //todo
+  public void agregarEjemplar(Ejemplar unEjemplar){
+    listaDeAlquilables.put(unEjemplar.getCodigo(), unEjemplar);
   }
 
-  public void devolverPelicula(Ejemplar unEjemplar){
-    //todo
+  public void agregarConsola(Consola unaConsola){
+    listaDeAlquilables.put(unaConsola.getCodigo(), unaConsola);
   }
 
-  public void alquilarConsola(Consola unaConsola){
-    //todo
+  public void alquilarPelicula(Integer codigo){
+    listaDeAlquilables.get(codigo).alquilar();
   }
 
-  public void devolverConsola(Consola unaConsola){
-    //todo
+  public void devolverPelicula(Integer codigo){
+    listaDeAlquilables.get(codigo).devolver();
   }
 
-  public boolean alquilado(Alquilable unAlquilable){
-    return true;
-    //todo
+  public boolean consultarDisponibilidad(Integer codigo){
+    return listaDeAlquilables.get(codigo).alquilado();
   }
 
-  public ArrayList<Alquilable> getListaDeAlquilables() {
+  public void alquilarConsola(Integer codigo){
+    listaDeAlquilables.get(codigo).alquilar();
+  }
+
+  public void devolverConsola(Integer codigo){
+    listaDeAlquilables.get(codigo).devolver();
+  }
+
+  public boolean alquilado(Integer codigo){
+    return listaDeAlquilables.get(codigo).alquilado();
+  }
+
+  public HashMap<Integer, Alquilable> getListaDeAlquilables() {
     return listaDeAlquilables;
   }
 }
